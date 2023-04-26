@@ -26,7 +26,7 @@ app.get("/api/youtube", async (req, res) => {
   const url = req.query.url;
   try {
   const data = await ssyoutube(url);
-  let video_quality = data.video_quality[1]
+  let video_quality = '720'
   for(let i = 0; i < data.url.length; i++){
     if (data.url[i].quality === video_quality){
       // res.json(data.url[i])
